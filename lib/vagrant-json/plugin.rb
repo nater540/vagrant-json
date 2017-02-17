@@ -1,3 +1,9 @@
+begin
+  require 'vagrant'
+rescue LoadError
+  raise 'The Vagrant JSON Status plugin must be run within Vagrant.'
+end
+
 if Vagrant::VERSION < '1.9.0'
   raise 'The Vagrant JSON Status plugin is only compatible with Vagrant 1.9+'
 end
